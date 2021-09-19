@@ -8,12 +8,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Experience from "./components/pages/Experience";
 import Skills from "./components/pages/Skills";
 import Foot from "./components/pages/Foot";
+import Head from "./components/pages/Head";
 
 
 
 function App() {
   return (
-    <div><Router>
+    <div>  <Head />
+    <Router>
     <div>
       <NavTabs />
       <Route exact path="/" component={Home} />
