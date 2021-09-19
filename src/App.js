@@ -1,19 +1,14 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from "./components/header";
-import Footer from "./components/footer";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import NavTabs from "./components/NavTabs";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Blog from "./components/pages/Blog";
 import Contact from "./components/pages/Contact";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import NavTabs from "./components/NavTabs";
-
 
 function App() {
-  return( <div>
-        <Header />
-        <Router>
+  return (
+    <Router>
       <div>
         <NavTabs />
         <Route exact path="/" component={Home} />
@@ -22,8 +17,7 @@ function App() {
         <Route path="/contact" component={Contact} />
       </div>
     </Router>
-        <Footer />
-</div>);
+  );
 }
 
 export default App;
